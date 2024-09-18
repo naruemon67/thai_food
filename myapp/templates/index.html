@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+{% load static %}
+{% block content %}
+    <div class="h-screen bg-white-100 p-10">
+        <div class="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- รายการที่ 1 -->
+            <div class="bg-white flex flex-col items-center justify-between">
+                <div class="flex flex-col items-center px-6 py-8">
+                    <img class="object-cover object-center w-48 h-48 rounded-full mb-4" src="{% static 'image/ปกเห็ด.jpg' %}" alt="แกงเห็ดเผาะไข่มดแดง">
+                    <h1 class="text-3xl text-blacky-600 mb-4 font-mitr">แกงเห็ดเผาะไข่มดแดง</h1>
+                    <p class="text-xs mb-4 text-gray-600 font-sarabun text-center">แกงเห็ดเผาะไข่มดแดง เป็นอาหารพื้นเมือง ที่มีสรรพคุณต่อสุขภาพ ของจังหวัดอุบลราชธานี มีความโดดเด่นและมีเอกลักษณ์ ของความเป็นไทย เป็นอาหารที่ใช้วัตถุดิบธรรมชาติที่มีในท้องถิ่นมาปรุงแต่ง และถ่ายทอดภูมิปัญญาอาหารพื้นเมืองมาช้านาน เป็นอาหารแห่งความมีคุณค่าทางโภชนาการ และสรรพคุณทางยาจากพืชผักสมุนไพรพื้นบ้าน </p>
+                    <a href="/food1/" class="bg-gray-600 text-white py-2 px-4 rounded-lg text-lg hover:bg-purple-700 transition duration-300 ease-in-out font-sarabun">เรียนรู้เพิ่มเติม&gt;&gt;</a>
+                </div>
+            </div>
+            <!-- รายการที่ 2 -->
+            <div class="bg-white flex flex-col items-center justify-between">
+                <div class="flex flex-col items-center px-6 py-8">
+                    <img class="object-cover object-center w-48 h-48 rounded-full mb-4" src="{% static 'image/ปกหอย.jpg' %}" alt="แกงอ่อมหอยขม">
+                    <h3 class="text-3xl text-black-600 mb-4 font-mitr">แกงอ่อมหอยขม</h3>
+                    <p class="text-xs mb-4 text-gray-600 font-sarabun text-center"> แกงอ่อมหอยขม เป็นอาหารพื้นเมือง ที่มีสรรพคุณต่อสุขภาพ ของจังหวัดอุบลราชธานี มีความโดดเด่นและมีเอกลักษณ์ ของความเป็นไทย ถูกปรุงแต่งและถ่ายทอดสูตรอาหารพื้นเมืองโบราณของจังหวัดอุบลราชธานีมาช้านาน เป็นอาหารแห่งความมีคุณค่าทางโภชนาการ และสรรพคุณทางยาจากพืชผักสมุนไพรพื้นบ้านที่มีประโยชน์นานาชนิด</p>
+                    <a href="/food2/" class="bg-gray-600 text-white py-2 px-4 rounded-lg text-lg hover:bg-purple-700 transition duration-300 ease-in-out font-sarabun">เรียนรู้เพิ่มเติม&gt;&gt;</a>
+                </div>
+            </div>
+            <!-- รายการที่ 3 -->
+            <div class="bg-white flex flex-col items-center justify-between">
+                <div class="flex flex-col items-center px-6 py-8">
+                    <img class="object-cover object-center w-48 h-48 rounded-full mb-4" src="{% static 'image/ปกปลา.jpg' %}" alt="ลาบปลาคัง">
+                    <h3 class="text-3xl text-black-600 mb-4 font-mitr">ลาบปลาคัง</h3>
+                    <p class="text-xs mb-4 text-gray-600 font-sarabun text-center">ลาบปลาคัง เป็นอาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพ ตามวิถีภูมิปัญญาท้องถิ่น ของจังหวัดอุบลราชธานี ที่ได้สืบทอดกันมารุ่นต่อรุ่น มีความโดดเด่นและมีความเป็นเอกลักษณ์ของจังหวัดอุบลราชธานี เป็นต้นตำรับเมนูสมุนไพรโบราณที่มีมาช้านานทั้งในเรื่องของรสชาติที่กลมกล่อม เครื่องปรุงล้วนเป็นสมุนไพรจากธรรมชาติ </p>
+                    <a href="/food3/" class="bg-gray-600 text-white py-2 px-4 rounded-lg text-lg hover:bg-purple-700 transition duration-300 ease-in-out font-sarabun">เรียนรู้เพิ่มเติม&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

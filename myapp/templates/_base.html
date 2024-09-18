@@ -1,0 +1,51 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django + Tailwind CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&family=Mitr:wght@300;400;500;700&family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+</head>
+
+<body class="bg-white-50">
+    <header class="bg-orange-400 text-white mb-8 py-4 font-sarabun">
+        <div class="container mx-auto flex items-center">
+            <!-- Website Icon -->
+            <div class="flex items-center mr-10">
+                <img src="{% static 'image/foodlogo.jpg' %}" alt="Website Icon" class="h-10 w-10 rounded-full mr-2 object-cover">
+            </div>
+
+            <!-- Navigation Menu (aligned to the left) -->
+            <nav class="flex-1">
+                <ul class="flex space-x-6 justify-start">
+                    <li><a href="/" class="hover:text-gray-300">หน้าแรก</a></li>
+                    <li><a href="/cal/" class="hover:text-gray-300">ตารางเทียบแคลอรี่</a></li>
+                    <li><a href="/profile/" class="hover:text-gray-300">ผู้จัดทำ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <p>
+            <u>
+                <h4 class="text-center text-2xl font-prompt">
+                    อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี
+                </h4>
+            </u>
+        </p>
+    </div>
+    <div class="container mx-auto mt-4">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

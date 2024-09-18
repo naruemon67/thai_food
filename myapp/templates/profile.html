@@ -1,0 +1,41 @@
+{% extends "_base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('{% static 'image/ท้องฟ้า.jpg' %}');
+            background-size: cover;  /* ทำให้ภาพพื้นหลังครอบคลุมพื้นที่ทั้งหมด */
+            background-position: center; /* จัดตำแหน่งภาพพื้นหลังที่กลางของพื้นที่ */
+            background-repeat: no-repeat; /* ทำให้ภาพพื้นหลังไม่ทำซ้ำ */
+            margin: 0; /* ลบ margin ของ body */
+            height: 100vh; /* ทำให้ body มีความสูง 100% ของ viewport */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div class="flex items-center justify-center h-full w-full">
+        <div class="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden border-2 border-gray-300">
+            <!-- Adjust the size of the profile picture -->
+            <img class="w-full h-64 object-cover" src="{% static 'image/profile.jpg' %}" alt="Avatar">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold text-gray-800">นางสาวนฤมล ขันธิวัตร</h2>
+                <p class="mt-2 text-gray-600">นักศึกษาสาขาเทคโนโลยีสารสนเทศและการสื่อสาร คณะวิทยาศาสตร์ มหาวิทยาลัยอุบลราชธานี</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-orange-500 text-white text-sm rounded-full">Unity</span>
+                    <span class="px-3 py-1 bg-red-500 text-white text-sm rounded-full">MySQL</span>
+                    <span class="px-3 py-1 bg-yellow-500 text-white text-sm rounded-full">PHP</span>
+                    <span class="px-3 py-1 bg-green-500 text-white text-sm rounded-full">React</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
